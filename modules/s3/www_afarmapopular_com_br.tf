@@ -1,10 +1,3 @@
-/*
-loja.afarmapopular.com.br
-adm.afarmapopular.com.br
-gestao.afarmapopular.com.br
-gestao.afarma.app.br
-*/
-
 resource "aws_s3_bucket" "www_afarmapopular_com_br" {
   bucket = "www2.afarmapopular.com.br"
   acl    = "public-read"

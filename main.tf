@@ -21,9 +21,4 @@ resource "aws_key_pair" "deployer-aws" {
 
 module "buckets" {
   source = "./modules/s3"
-  
-}
-
-module "servers" {
-  source = "./modules/servers"
 }

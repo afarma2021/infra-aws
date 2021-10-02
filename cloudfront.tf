@@ -1,0 +1,45 @@
+resource "aws_cloudfront_distribution" "afarma_front" {
+  origin {
+    domain_name = replace(aws_s3_bucket.www_afarmapopular_com_br.website_endpoint, "/^https?://([^/]*).*/", "$1")
+    origin_id   = "s3"
+
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1.2"]
+    }
+  }
+  enabled         = true
+  is_ipv6_enabled = true
+  comment         = "Front Cloudfront"
+
+  aliases = ["afarmapopular.com.br", "*.afarmapopular.com.br"]
+
+  default_cache_behavior {
+    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = "s3"
+    forwarded_values {
+      headers      = ["*"]
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  tags = {
+    Environment = "${var.environment}"
+    Name        = "Front End Afarmapopular.com.br Cloudfront"
+  }
+
+  viewer_certificate {
+    cloudfront_default_certificate = false
+    acm_certificate_arn            = aws_acm_certificate.afarmapopularbrcert.arn
+    ssl_support_method             = "sni-only"
+  }
+
+  depends_on = [aws_s3_bucket.www_afarmapopular_com_br]
+}
