@@ -11,5 +11,5 @@ output "dns_load_balancer" {
 }
 
 output "nameservers_afarmapopuplarbr" {
-    value = aws_route53_zone.afarmapopularbr.name_servers 
+  value = aws_route53_zone.afarmapopularbr.name_servers
 }
