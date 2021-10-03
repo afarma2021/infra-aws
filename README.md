@@ -21,15 +21,15 @@ Os arquivos principais do projeto são determinados pelo prefixo "afarma-" e, to
 
 A estrutura está definida baseada no nome do serviço aws(prefixo) e suas dependencias no sufixo. A saber:
 
-> ** "ec2--alb" :
+> **"ec2--alb" :**
 
-> ** "ec2--alb" :
+> **"ec2--alb" :**
 
-> ** "ec2--alb" :
+> **"ec2--alb" :**
 
-> ** "ec2--alb" :
+> **"ec2--alb" :**
 
-> ** "ec2--alb" :
+> **"ec2--alb" :**
 
 *"rds--db" :
 *"rds--sg" :
