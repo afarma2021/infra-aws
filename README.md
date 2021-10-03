@@ -2,20 +2,20 @@
 
 TODOS os arquivos com a extensão "(old)" estão sendo ignorados pelo Terraform
 
-> **"main": 
+> **"main":** 
 
-> **"outputs": 
+> **"outputs":**
 
-> **"variables": 
+> **"variables":** 
 
 
 # Serviços Comuns ao Projeto
 
 Os arquivos principais do projeto são determinados pelo prefixo "afarma-" e, todos os seus serviços únicos e principais de acordo com o serviço aws. A saber:
 
-> **"afarma-alb" :
+> **"afarma-alb" :**
 
-> **"afarma-aws_key_pairs" :
+> **"afarma-aws_key_pairs" :**
 
 > **"afarma-certs" :
 
