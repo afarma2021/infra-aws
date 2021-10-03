@@ -1,11 +1,5 @@
-/*
-loja.afarmapopular.com.br
-adm.afarmapopular.com.br
-gestao.afarmapopular.com.br
-*/
-
-resource "aws_s3_bucket" "gestao_afarma_app_br" {
-  bucket = "gestao2.afarma.app.br"
+resource "aws_s3_bucket" "new_gestao_afarma_app_br" {
+  bucket = "new-gestao.afarma.app.br"
   acl    = "public-read"
 
   policy = <<EOF
@@ -19,7 +13,7 @@ resource "aws_s3_bucket" "gestao_afarma_app_br" {
         "s3:GetObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${"gestao2.afarma.app.br"}/*",
+      "Resource": "arn:aws:s3:::${"new-gestao.afarma.app.br"}/*",
       "Principal": "*"
     }
   ]

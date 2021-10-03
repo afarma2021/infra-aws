@@ -17,11 +17,11 @@ Os arquivos principais do projeto são determinados pelo prefixo "afarma-" e, to
 
 > **"afarma-aws_key_pairs" :**
 
-> **"afarma-certs" :
+> **"afarma-certs" :**
 
-> **"afarma-dns" :
+> **"afarma-dns" :**
 
-> **"afarma-vpc" :
+> **"afarma-vpc" :**
 
 # Estrutura de Ativos do Projeto
 
@@ -38,62 +38,62 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"ec2--alb" :**
 
 
-> **"rds--db" :
+> **"rds--db" :**
 
-> **"rds--sg" :
-
-
-> **"s3--afarma-bucket":
-
-> **"s3--afarma-cloudfront":
-
-> **"s3--afarma-dns":
+> **"rds--sg" :**
 
 
-> **"s3--afarma-bucket"(old) :
+> **"s3--afarma-bucket":**
 
-> **"s3--afarma-cloudfront"(old) :
+> **"s3--afarma-cloudfront":**
 
-> **"s3--afarma-dns"(old) :
-
-
-> **"s3--afarma_app_br-bucket"(old) :
-
-> **"s3--afarma_app_br-cloudfront"(old) :
-
-> **"s3--afarma_app_br-dns"(old) :
+> **"s3--afarma-dns":**
 
 
-> **"s3-www-afarma_app_br-bucket"(old) :
+> **"s3--afarma-bucket"(old) :**
 
-> **"s3-www-afarma_app_br-cloudfront"(old) :
+> **"s3--afarma-cloudfront"(old) :**
 
-> **"s3-www-afarma_app_br-dns"(old) :
-
-
-> **"s3-adm-afarmapopular_com_br-bucket" :
-
-> **"s3-adm-afarmapopular_com_br-cloudfront" :
-
-> **"s3-adm-afarmapopular_com_br-dns" :
+> **"s3--afarma-dns"(old) :**
 
 
-> **"s3-gestao-afarmapopular_com_br-bucket" :
+> **"s3--afarma_app_br-bucket"(old) :**
 
-> **"s3-gestao-afarmapopular_com_br-cloudfront" :
+> **"s3--afarma_app_br-cloudfront"(old) :**
 
-> **"s3-gestao-afarmapopular_com_br-dns" :
-
-
-> **"s3-loja-afarmapopular_com_br-bucket" :
-
-> **"s3-loja-afarmapopular_com_br-cloudfront" :
-
-> **"s3-loja-afarmapopular_com_br-dns" :
+> **"s3--afarma_app_br-dns"(old) :**
 
 
-> **"s3-www_afarmapopular_com_br-bucket" :
+> **"s3-www-afarma_app_br-bucket"(old) :**
 
-> **"s3-www_afarmapopular_com_br-cloudfront" :
+> **"s3-www-afarma_app_br-cloudfront"(old) :**
 
-> **"s3-www_afarmapopular_com_br-dns" :
+> **"s3-www-afarma_app_br-dns"(old) :**
+
+
+> **"s3-adm-afarmapopular_com_br-bucket" :**
+
+> **"s3-adm-afarmapopular_com_br-cloudfront" :**
+
+> **"s3-adm-afarmapopular_com_br-dns" :**
+
+
+> **"s3-gestao-afarmapopular_com_br-bucket" :**
+
+> **"s3-gestao-afarmapopular_com_br-cloudfront" :**
+
+> **"s3-gestao-afarmapopular_com_br-dns" :**
+
+
+> **"s3-loja-afarmapopular_com_br-bucket" :**
+
+> **"s3-loja-afarmapopular_com_br-cloudfront" :**
+
+> **"s3-loja-afarmapopular_com_br-dns" :**
+
+
+> **"s3-www_afarmapopular_com_br-bucket" :**
+
+> **"s3-www_afarmapopular_com_br-cloudfront" :**
+
+> **"s3-www_afarmapopular_com_br-dns" :**

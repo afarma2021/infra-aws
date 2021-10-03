@@ -1,6 +1,6 @@
-resource "aws_cloudfront_distribution" "afarma_front" {
+resource "aws_cloudfront_distribution" "gestao_afarma_front" {
   origin {
-    domain_name = replace(aws_s3_bucket.new_www_afarma_com_br.website_endpoint, "/^https?://([^/]*).*/", "$1")
+    domain_name = replace(aws_s3_bucket.new_gestao_afarma_app_br.website_endpoint, "/^https?://([^/]*).*/", "$1")
     origin_id   = "s3"
 
     custom_origin_config {
@@ -14,7 +14,7 @@ resource "aws_cloudfront_distribution" "afarma_front" {
   is_ipv6_enabled = true
   comment         = "Front Cloudfront"
 
-  aliases = ["*.afarma.com.br"]
+  aliases = ["new-gestao.afarma.app.br"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -32,7 +32,7 @@ resource "aws_cloudfront_distribution" "afarma_front" {
 
   tags = {
     Environment = "${var.environment}"
-    Name        = "Front End afarma.com.br Cloudfront"
+    Name        = "Front End gestao.afarma.app.br Cloudfront"
   }
 
   viewer_certificate {
@@ -45,5 +45,5 @@ resource "aws_cloudfront_distribution" "afarma_front" {
       restriction_type = "none"
     }
   }
-  depends_on = [aws_s3_bucket.new_www_afarma_com_br]
+  depends_on = [aws_s3_bucket.new_gestao_afarma_app_br]
 }
