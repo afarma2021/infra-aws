@@ -18,7 +18,7 @@ resource "aws_route53_record" "afarmaappbr_cert_validation" {
 }
 
 # This tells terraform to cause the route53 validation to happen
-resource "aws_acm_certificate_validation" "cert" {
+resource "aws_acm_certificate_validation" "cert-afarma" {
   certificate_arn         = aws_acm_certificate.afarmaappbrcert.arn
   validation_record_fqdns = [aws_route53_record.afarmaappbr_cert_validation.fqdn]
 }

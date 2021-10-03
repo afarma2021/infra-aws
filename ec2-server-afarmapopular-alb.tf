@@ -1,11 +1,11 @@
 resource "aws_alb" "api_afarmapopular_alb" {
-  name            = "api_afarmapopular-load-balancer"
+  name            = "api-afarmapopular-load-balancer"
   subnets         = aws_subnet.public.*.id
   security_groups = [aws_security_group.alb.id]
 }
 
 resource "aws_alb_target_group" "api_afarmapopular_alb_tg" {
-  name     = "api_afarmapopular-target-group"
+  name     = "api-afarmapopular-target-group"
   port     = 8080
   protocol = "HTTP"
   vpc_id   = aws_vpc.this.id

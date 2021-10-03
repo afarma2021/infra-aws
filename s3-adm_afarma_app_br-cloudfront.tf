@@ -1,6 +1,6 @@
-resource "aws_cloudfront_distribution" "adm_afarmapopular_front" {
+resource "aws_cloudfront_distribution" "adm_afarmaapp_front" {
   origin {
-    domain_name = replace(aws_s3_bucket.new-adm_afarmapopular_com_br.website_endpoint, "/^https?://([^/]*).*/", "$1")
+    domain_name = replace(aws_s3_bucket.new_adm_afarma_app_br.website_endpoint, "/^https?://([^/]*).*/", "$1")
     origin_id   = "s3"
 
     custom_origin_config {
@@ -14,7 +14,7 @@ resource "aws_cloudfront_distribution" "adm_afarmapopular_front" {
   is_ipv6_enabled = true
   comment         = "Front Cloudfront"
 
-  aliases = ["new-adm.afarmapopular.com.br"]
+  aliases = ["new-adm.afarma.app.br"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -32,12 +32,12 @@ resource "aws_cloudfront_distribution" "adm_afarmapopular_front" {
 
   tags = {
     Environment = "${var.environment}"
-    Name        = "Front End adm.afarmapopular.com.br Cloudfront"
+    Name        = "Front End adm.afarma.app.br Cloudfront"
   }
 
   viewer_certificate {
     cloudfront_default_certificate = false
-    acm_certificate_arn            = aws_acm_certificate.afarmapopularbrcert.arn
+    acm_certificate_arn            = aws_acm_certificate.afarmaappbrcert.arn
     ssl_support_method             = "sni-only"
   }
   restrictions {
@@ -45,5 +45,5 @@ resource "aws_cloudfront_distribution" "adm_afarmapopular_front" {
       restriction_type = "none"
     }
   }
-  depends_on = [aws_s3_bucket.new-adm_afarmapopular_com_br]
+  depends_on = [aws_s3_bucket.new_adm_afarma_app_br]
 }

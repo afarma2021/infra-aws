@@ -1,4 +1,4 @@
-resource "aws_route53_record" "api" {
+resource "aws_route53_record" "api-afarmapopular" {
   zone_id = aws_route53_zone.afarmapopularbr.zone_id
   name    = "api"
   type    = "A"

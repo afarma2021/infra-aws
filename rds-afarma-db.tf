@@ -1,22 +1,9 @@
-resource "random_password" "psql_password" {
-  length  = 38
-  special = false
-}
-
-resource "aws_db_subnet_group" "persistent_data" {
-  name        = "persistent_data"
-  description = "Persistent Data"
-  /*subnet_ids  = aws_subnet.private.*.id*/
-  subnet_ids = aws_subnet.public.*.id
-}
-
-
-resource "aws_db_instance" "default" {
+resource "aws_db_instance" "afarma" {
   allocated_storage = 10
   engine            = "postgres"
   #engine_version       = "12.2"
   instance_class      = "db.t3.large"
-  name                = var.dbname
+  name                = var.dbname_afarma
   username            = var.dbuser
   password            = var.dbpasswd //random_password.psql_password.result
   skip_final_snapshot = true
