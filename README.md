@@ -43,7 +43,7 @@ Os arquivos principais do projeto são determinados pelo prefixo "afarma-" e, to
 A estrutura está definida baseada no nome do serviço aws(prefixo) e suas dependencias no sufixo. A saber:
 
 
->#### Servidor Wildfly AFARMA
+>## Servidor Wildfly AFARMA
 
 > **"ec2-server-afarma-alb.tf":** 
 
@@ -52,7 +52,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"ec2-server-afarma.tf":** 
 
 
->#### Servidor Wildfly AFARMAPOPULAR
+>## Servidor Wildfly AFARMAPOPULAR
 
 > **"ec2-server-afarmapopular-alb.tf":** 
 
@@ -61,14 +61,14 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"ec2-server-afarmapopular.tf":** 
 
 
->#### Servidores de Banco de Dados
+>## Servidores de Banco de Dados
 
 > **"rds-afarma-db.tf":** 
 
 > **"rds-afarmapopular-db.tf":** 
 
 
->#### BUCKET adm_afarma_app_br
+>## BUCKET adm_afarma_app_br
 
 > **"s3-adm_afarma_app_br-bucket.tf":** 
 
@@ -77,7 +77,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"s3-adm_afarma_app_br-dns.tf":** 
 
 
->#### BUCKET adm_afarmapopular_com_br
+>## BUCKET adm_afarmapopular_com_br
 
 > **"s3-adm_afarmapopular_com_br-bucket.tf":** 
 
@@ -86,7 +86,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"s3-adm_afarmapopular_com_br-dns.tf":** 
 
 
->#### BUCKET gestao_afarma_app_br
+>## BUCKET gestao_afarma_app_br
 
 > **"s3-gestao_afarma_app_br-bucket.tf":** 
 
@@ -95,7 +95,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"s3-gestao_afarma_app_br-dns.tf":** 
 
 
->#### BUCKET gestao_afarmapopular_com_br
+>## BUCKET gestao_afarmapopular_com_br
 
 > **"s3-gestao_afarmapopular_com_br-bucket.tf":** 
 
@@ -104,7 +104,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"s3-gestao_afarmapopular_com_br-dns.tf":** 
 
 
->#### BUCKET loja_afarmapopular_com_br
+>## BUCKET loja_afarmapopular_com_br
 
 > **"s3-loja_afarmapopular_com_br-bucket.tf":** 
 
@@ -113,7 +113,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"s3-loja_afarmapopular_com_br-dns.tf":** 
 
 
->#### BUCKET www_afarma_app_br
+>## BUCKET www_afarma_app_br
 
 > **"s3-www_afarma_app_br-bucket.tf":** 
 
@@ -122,7 +122,7 @@ A estrutura está definida baseada no nome do serviço aws(prefixo) e suas depen
 > **"s3-www_afarma_app_br-dns.tf:** 
 
 
->#### BUCKET www_afarmapopular_com_br
+>## BUCKET www_afarmapopular_com_br
 
 > **"s3-www_afarmapopular_com_br-bucket.tf:** 
 
