@@ -1,3 +1,4 @@
+
 resource "aws_db_instance" "afarmapopular" {
   allocated_storage = 10
   engine            = "postgres"

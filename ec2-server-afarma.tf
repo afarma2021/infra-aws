@@ -7,5 +7,8 @@ resource "aws_instance" "server-afarma" {
   vpc_security_group_ids = ["${aws_security_group.wildfly.id}"]
   depends_on             = [aws_key_pair.deployer-aws]
   key_name               = aws_key_pair.deployer-aws.id
+  tags = {
+    Name = "server-afarma"
+  }
 }
 

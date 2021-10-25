@@ -1,7 +1,7 @@
-resource "aws_s3_bucket" "new_www_afarma_app_br" {
-  bucket = "www2.afarma.app.br"
+resource "aws_s3_bucket" "images_afarma_app_br" {
+  bucket = "images.afarma.app.br"
   acl    = "public-read"
-  /* website_endpoint = "http://www2.afarma.app.br" */
+  /* website_endpoint = "http://images.afarma.app.br" */
 
   policy = <<EOF
 {
@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "new_www_afarma_app_br" {
         "s3:GetObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${"www2.afarma.app.br"}/*",
+      "Resource": "arn:aws:s3:::${"images.afarma.app.br"}/*",
       "Principal": "*"
     }
   ]

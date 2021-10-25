@@ -1,3 +1,4 @@
+/*
 resource "aws_route53_record" "gestaoafarmapopularcombrfront" {
   zone_id = aws_route53_zone.afarmapopularbr.zone_id
   name    = "gestao"
@@ -9,3 +10,4 @@ resource "aws_route53_record" "gestaoafarmapopularcombrfront" {
     evaluate_target_health = false
   }
 }
+*/
